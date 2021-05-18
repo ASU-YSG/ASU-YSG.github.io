@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Post Game Action Plan</title>
-  </head>
-  <style>
-    body, html{
-      height: 100%;
-      background-color: gray;
-    }
-    .textpanel{
-      position: relative;
-      height: 100%;
-    }
-    .textpanel img{
-      height: 100%;
-      width: 30%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .textpanel textarea{
-      position: absolute;
-      top: 16.25%;
-      left: 37.5%;
-      height: 18%;
-      width: 25.25%;
-      background-color: rgba(255,255,255,0.5);
-    }
-    textarea{
-      resize: none;
-    }
-    input{
-      width: 20%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    button{
-      width: 20%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
-  <body>
-    <div class="textpanel">
-      <img src="https://i.imgur.com/TkbGiD3.png" alt="Post Game Action Plan" />
-        <textarea id="inputTextToSave" placeholder="Enter your answers here"></textarea>
-    </div>
-    <br/>
-    <input id="inputFileNameToSaveAs" placeholder="File name to save responses as">
-    <br/>
-    <button onclick="saveTextAsFile()">Save Text to File</button>
-    <hr>
-    <br/>
 
-    <script type="text/javascript">
-      function saveTextAsFile() {
-        var textToSave = document.getElementById("inputTextToSave").value;
-        var textToSaveAsBlob = new Blob([textToSave], { type: "text/plain" });
-        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-        var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Post Game Action Plan</title>
+</head>
+<style>
+  body,
+  html {
+    height: 100%;
+    background-color: gray;
+  }
 
-        var downloadLink = document.createElement("a");
-        downloadLink.download = fileNameToSaveAs;
-        downloadLink.innerHTML = "Download File";
-        downloadLink.href = textToSaveAsURL;
-        downloadLink.onclick = destroyClickedElement;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
+  .textpanel {
+    position: relative;
+    height: 100%;
+  }
 
-        downloadLink.click();
-      }
+  .textpanel img {
+    height: 100%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-      function destroyClickedElement(event) {
-        document.body.removeChild(event.target);
-      }
-    </script>
-  </body>
+  .textpanel textarea {
+    position: absolute;
+    top: 16.25%;
+    left: 37.5%;
+    height: 18%;
+    width: 25.25%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3{
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div class="textpanel">
+    <img src="https://i.imgur.com/TkbGiD3.png" alt="Post Game Action Plan" />
+    <textarea id="inputTextToSave" placeholder="Enter your answers here"></textarea>
+  </div>
+  <br />
+  <h3>To save your responses, press the windows key in the bottom corner and type "Snipping tool" then screenshot your response and send it as an attchment to your email!</h3>
+  <br />
+  <hr>
+  <br />
+</body>
 </html>
