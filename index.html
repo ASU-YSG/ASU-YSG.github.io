@@ -28,7 +28,7 @@
 
   .textpanel textarea {
     position: absolute;
-    top: 16.25%;
+    top: 22.25%;
     left: 37.5%;
     height: 18%;
     width: 25.25%;
@@ -54,18 +54,32 @@
   }
   h3{
     text-align: center;
+    color: white;
   }
 </style>
 
 <body>
   <div class="textpanel">
+    <h3>Enter responses below and click submit when finished</h3>
     <img src="https://raw.githubusercontent.com/ASU-YSG/ASU-YSG.github.io/master/actionplan.PNG" alt="Post Game Action Plan" />
-    <textarea id="inputTextToSave" placeholder="Enter your answers here"></textarea>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwSw79qPAqyggxinuMzHITyzeq985HE38foV2DJF7Rfxw_VjBe1bnUfKKoIXuiXqYZ8/exec">
+      <textarea name="Response" placeholder="Enter your answers here" required></textarea>
+      <input name="Email" type="email" placeholder="Email" required>
+      <input type="submit" value="submit" name="submit"/>
+    </form>  
   </div>
-  <br />
-  <h3>To save your responses, press the windows key in the bottom corner and type "Snipping tool" then screenshot your response and send it as an attchment to your email!</h3>
-  <br />
-  <hr>
-  <br />
+  <div>
+    <p></p>
+    <h1></h1>
+    <br />
+    <br/>
+    <br/>
+    <hr>
+    <br/>
+    <h3>To save your responses, press the windows key in the bottom corner and type "Snipping tool" then screenshot your response and send it as an attchment to your email!</h3>
+    <br />
+    <hr>
+    <br />
+  </div>
 </body>
 </html>
